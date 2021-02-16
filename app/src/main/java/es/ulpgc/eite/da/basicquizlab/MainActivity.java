@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
   }
 
-  //TODO: en vez de usar un metodo para cada boton, podemos
-  // hacerlo usando un solo metodo para todos los botones
   public void onButtonClick(View view) {
 
     switch (view.getId()) {
