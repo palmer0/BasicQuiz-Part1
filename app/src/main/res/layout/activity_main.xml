@@ -30,7 +30,6 @@
 
         <Button
             android:id="@+id/trueButton"
-            android:onClick="onTrueButtonClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button"
@@ -43,7 +42,6 @@
 
         <Button
             android:id="@+id/falseButton"
-            android:onClick="onFalseButtonClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button"
@@ -75,7 +73,6 @@
 
         <Button
             android:id="@+id/nextButton"
-            android:onClick="onNextButtonClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button"
@@ -91,7 +88,6 @@
         <Button
             android:id="@+id/cheatButton"
             android:visibility="gone"
-            android:onClick="onCheatButtonClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button"

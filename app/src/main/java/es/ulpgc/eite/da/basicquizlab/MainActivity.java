@@ -22,10 +22,44 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     initLayoutData();
-
     linkLayoutComponents();
     initLayoutContent();
+    enableLayoutButtons();
+  }
 
+  private void enableLayoutButtons() {
+
+    trueButton.setOnClickListener(new View.OnClickListener() {
+
+      @Override
+      public void onClick(View v) {
+        onTrueButtonClicked(v);
+      }
+    });
+
+    falseButton.setOnClickListener(new View.OnClickListener() {
+
+      @Override
+      public void onClick(View v) {
+        onFalseButtonClicked(v);
+      }
+    });
+
+    nextButton.setOnClickListener(new View.OnClickListener() {
+
+      @Override
+      public void onClick(View v) {
+        onNextButtonClicked(v);
+      }
+    });
+
+    cheatButton.setOnClickListener(new View.OnClickListener() {
+
+      @Override
+      public void onClick(View v) {
+        onCheatButtonClicked(v);
+      }
+    });
   }
 
 
@@ -46,35 +80,41 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void initLayoutContent() {
-    falseButton.setText(R.string.false_button_text);
-    trueButton.setText(R.string.true_button_text);
-    nextButton.setText(R.string.next_button_text);
-    cheatButton.setText(R.string.cheat_button_text);
-
-    //TODO: refactorizar en un método este codigo repetido
     questionText.setText(questionArray[questionIndex]);
     replyText.setText(R.string.empty_text);
 
   }
 
-  public void onButtonClick(View view) {
+//  private void initLayoutContent() {
+//    falseButton.setText(R.string.false_button_text);
+//    trueButton.setText(R.string.true_button_text);
+//    nextButton.setText(R.string.next_button_text);
+//    cheatButton.setText(R.string.cheat_button_text);
+//
+//    //TODO: refactorizar en un método este codigo repetido
+//    questionText.setText(questionArray[questionIndex]);
+//    replyText.setText(R.string.empty_text);
+//
+//  }
 
-    switch (view.getId()) {
-      case R.id.falseButton:
-        onFalseButtonClick(view);
-      case R.id.trueButton:
-        onTrueButtonClick(view);
-      case R.id.nextButton:
-        onNextButtonClick(view);
-      case R.id.cheatButton:
-        onCheatButtonClick(view);
-    }
-
-  }
+//  public void onButtonClick(View view) {
+//
+//    switch (view.getId()) {
+//      case R.id.falseButton:
+//        onFalseButtonClicked(view);
+//      case R.id.trueButton:
+//        onTrueButtonClicked(view);
+//      case R.id.nextButton:
+//        onNextButtonClicked(view);
+//      case R.id.cheatButton:
+//        onCheatButtonClicked(view);
+//    }
+//
+//  }
 
   //TODO: impedir que podamos hacer click en el boton
   // si ya hemos contestado a la pregunta
-  public void onTrueButtonClick(View view) {
+  public void onTrueButtonClicked(View view) {
     if(replyArray[questionIndex] == 1) {
       // correct
       replyText.setText(R.string.correct_text);
@@ -86,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
   //TODO: impedir que podamos hacer click en el boton
   // si ya hemos contestado a la pregunta
-  public void onFalseButtonClick(View view) {
+  public void onFalseButtonClicked(View view) {
     if(replyArray[questionIndex] == 0) {
       // correct
       replyText.setText(R.string.correct_text);
@@ -97,13 +137,13 @@ public class MainActivity extends AppCompatActivity {
   }
 
   //TODO: implementar boton para pasar a siguiente pantalla
-  public void onCheatButtonClick(View view) {
+  public void onCheatButtonClicked(View view) {
     // no implementado
   }
 
   //TODO: impedir que podamos hacer click en el boton
   // si aun no hemos contestado a la pregunta
-  public void onNextButtonClick(View view) {
+  public void onNextButtonClicked(View view) {
     questionIndex++;
 
     // hacemos que si llegamos al final del quiz
