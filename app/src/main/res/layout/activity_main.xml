@@ -33,6 +33,7 @@
             android:id="@+id/trueButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onTrueButtonClicked"
             android:text="@string/true_button_text"
             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
@@ -45,6 +46,7 @@
             android:id="@+id/falseButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onFalseButtonClicked"
             android:text="@string/false_button_text"
             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
     </LinearLayout>
@@ -76,6 +78,7 @@
             android:id="@+id/nextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onNextButtonClicked"
             android:text="@string/next_button_text"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             tools:text="Next" />
@@ -90,6 +93,7 @@
             android:id="@+id/cheatButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onCheatButtonClicked"
             android:text="@string/cheat_button_text"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:visibility="gone"

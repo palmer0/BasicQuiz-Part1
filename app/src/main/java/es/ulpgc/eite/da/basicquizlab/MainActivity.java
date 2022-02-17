@@ -24,42 +24,6 @@ public class MainActivity extends AppCompatActivity {
     initLayoutData();
     linkLayoutComponents();
     initLayoutContent();
-    enableLayoutButtons();
-  }
-
-  private void enableLayoutButtons() {
-
-    trueButton.setOnClickListener(new View.OnClickListener() {
-
-      @Override
-      public void onClick(View v) {
-        onTrueButtonClicked(v);
-      }
-    });
-
-    falseButton.setOnClickListener(new View.OnClickListener() {
-
-      @Override
-      public void onClick(View v) {
-        onFalseButtonClicked(v);
-      }
-    });
-
-    nextButton.setOnClickListener(new View.OnClickListener() {
-
-      @Override
-      public void onClick(View v) {
-        onNextButtonClicked(v);
-      }
-    });
-
-    cheatButton.setOnClickListener(new View.OnClickListener() {
-
-      @Override
-      public void onClick(View v) {
-        onCheatButtonClicked(v);
-      }
-    });
   }
 
 
