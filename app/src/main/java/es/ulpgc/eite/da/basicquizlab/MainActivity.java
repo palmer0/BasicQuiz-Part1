@@ -44,11 +44,34 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void initLayoutContent() {
+    falseButton.setText(R.string.false_button_text);
+    trueButton.setText(R.string.true_button_text);
+    nextButton.setText(R.string.next_button_text);
+    cheatButton.setText(R.string.cheat_button_text);
+
     questionText.setText(questionArray[questionIndex]);
     replyText.setText(R.string.empty_text);
 
   }
 
+  /*
+  //TODO: en vez de usar un metodo para cada boton, podemos
+  // hacerlo usando un solo metodo para todos los botones
+  public void onButtonClick(View view) {
+
+    switch (view.getId()) {
+      case R.id.falseButton:
+        onFalseButtonClick(view);
+      case R.id.trueButton:
+        onTrueButtonClick(view);
+      case R.id.nextButton:
+        onNextButtonClick(view);
+      case R.id.cheatButton:
+        onCheatButtonClick(view);
+    }
+
+  }
+  */
 
   //TODO: impedir que podamos hacer click en el boton
   // si ya hemos contestado a la pregunta

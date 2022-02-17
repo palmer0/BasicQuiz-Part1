@@ -34,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onTrueButtonClicked"
-            android:text="@string/true_button_text"
             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
         <Space
@@ -47,7 +46,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onFalseButtonClicked"
-            android:text="@string/false_button_text"
             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
     </LinearLayout>
 
@@ -56,7 +54,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="@string/empty_text"
         android:textAppearance="@android:style/TextAppearance.Material.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +76,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onNextButtonClicked"
-            android:text="@string/next_button_text"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             tools:text="Next" />
 
@@ -94,7 +90,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onCheatButtonClicked"
-            android:text="@string/cheat_button_text"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:visibility="gone"
             tools:text="Cheat" />
