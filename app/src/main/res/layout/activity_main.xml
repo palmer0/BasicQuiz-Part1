@@ -34,7 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onTrueButtonClicked"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            tools:text="True" />
 
         <Space
             android:layout_width="36dp"
@@ -46,11 +47,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onFalseButtonClicked"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            tools:text="False" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/replyText"
+        android:id="@+id/resultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -69,7 +71,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/replyText">
+        app:layout_constraintTop_toBottomOf="@+id/resultText">
 
         <Button
             android:id="@+id/nextButton"

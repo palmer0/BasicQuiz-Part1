@@ -10,11 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
   private Button falseButton, trueButton,cheatButton, nextButton;
-  private TextView questionText, replyText;
+  private TextView questionText, resultText;
 
   private String[] questionArray;
-  private int questionIndex=0;
-  private int[] replyArray;
+  private int quizIndex =0;
+  private int[] answerArray;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
   private void initLayoutData() {
     questionArray=getResources().getStringArray(R.array.question_array);
-    replyArray=getResources().getIntArray(R.array.reply_array);
+    answerArray =getResources().getIntArray(R.array.answer_array);
   }
 
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     nextButton = findViewById(R.id.nextButton);
 
     questionText = findViewById(R.id.questionText);
-    replyText = findViewById(R.id.replyText);
+    resultText = findViewById(R.id.resultText);
   }
 
   private void initLayoutContent() {
@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
     nextButton.setText(R.string.next_button_text);
     cheatButton.setText(R.string.cheat_button_text);
 
-    questionText.setText(questionArray[questionIndex]);
-    replyText.setText(R.string.empty_text);
+    questionText.setText(questionArray[quizIndex]);
+    resultText.setText(R.string.empty_text);
 
   }
 
@@ -76,24 +76,24 @@ public class MainActivity extends AppCompatActivity {
   //TODO: impedir que podamos hacer click en el boton
   // si ya hemos contestado a la pregunta
   public void onTrueButtonClicked(View view) {
-    if(replyArray[questionIndex] == 1) {
+    if(answerArray[quizIndex] == 1) {
       // correct
-      replyText.setText(R.string.correct_text);
+      resultText.setText(R.string.correct_text);
     } else {
       // incorrect
-      replyText.setText(R.string.incorrect_text);
+      resultText.setText(R.string.incorrect_text);
     }
   }
 
   //TODO: impedir que podamos hacer click en el boton
   // si ya hemos contestado a la pregunta
   public void onFalseButtonClicked(View view) {
-    if(replyArray[questionIndex] == 0) {
+    if(answerArray[quizIndex] == 0) {
       // correct
-      replyText.setText(R.string.correct_text);
+      resultText.setText(R.string.correct_text);
     } else {
       // incorrect
-      replyText.setText(R.string.incorrect_text);
+      resultText.setText(R.string.incorrect_text);
     }
   }
 
@@ -105,18 +105,18 @@ public class MainActivity extends AppCompatActivity {
   //TODO: impedir que podamos hacer click en el boton
   // si aun no hemos contestado a la pregunta
   public void onNextButtonClicked(View view) {
-    questionIndex++;
+    quizIndex++;
 
     // hacemos que si llegamos al final del quiz
     // volvamos a empezarlo nuevamente
     //TODO: refactorizar en un método este codigo
     // por si queremos implementar otras opciones posibles
-    if(questionIndex == questionArray.length) {
-      questionIndex=0;
+    if(quizIndex == questionArray.length) {
+      quizIndex =0;
     }
 
     //TODO: refactorizar en un método este codigo repetido
-    questionText.setText(questionArray[questionIndex]);
-    replyText.setText(R.string.empty_text);
+    questionText.setText(questionArray[quizIndex]);
+    resultText.setText(R.string.empty_text);
   }
 }
