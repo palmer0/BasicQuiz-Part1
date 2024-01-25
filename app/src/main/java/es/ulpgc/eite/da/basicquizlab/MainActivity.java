@@ -67,24 +67,13 @@ public class MainActivity extends AppCompatActivity {
 
   }
 
-  /*
+
   //TODO: en vez de usar un metodo para cada boton, podemos
   // hacerlo usando un solo metodo para todos los botones
-  public void onButtonClick(View view) {
-
-    switch (view.getId()) {
-      case R.id.falseButton:
-        onFalseButtonClick(view);
-      case R.id.trueButton:
-        onTrueButtonClick(view);
-      case R.id.nextButton:
-        onNextButtonClick(view);
-      case R.id.cheatButton:
-        onCheatButtonClick(view);
-    }
+  public void onButtonClicked(View view) {
 
   }
-  */
+
 
   //TODO: impedir que podamos hacer click en el boton
   // si ya hemos contestado a la pregunta
