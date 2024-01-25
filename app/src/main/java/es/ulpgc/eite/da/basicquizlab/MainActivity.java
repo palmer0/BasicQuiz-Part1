@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     resultText = findViewById(R.id.resultText);
   }
 
+  /*
   private void initLayoutContent() {
     falseButton.setText(R.string.false_button_text);
     trueButton.setText(R.string.true_button_text);
@@ -51,6 +52,18 @@ public class MainActivity extends AppCompatActivity {
 
     questionText.setText(questionArray[quizIndex]);
     resultText.setText(R.string.empty_text);
+
+  }
+  */
+
+  private void initLayoutContent() {
+    falseButton.setText("False");
+    trueButton.setText("True");
+    nextButton.setText("Next");
+    cheatButton.setText("Cheat");
+
+    questionText.setText(questionArray[quizIndex]);
+    resultText.setText("???");
 
   }
 
@@ -78,22 +91,27 @@ public class MainActivity extends AppCompatActivity {
   public void onTrueButtonClicked(View view) {
     if(answerArray[quizIndex] == 1) {
       // correct
-      resultText.setText(R.string.correct_text);
+      resultText.setText("Correct");
+      //resultText.setText(R.string.correct_text);
     } else {
       // incorrect
-      resultText.setText(R.string.incorrect_text);
+      resultText.setText("Incorrect");
+      //resultText.setText(R.string.correct_text);
     }
   }
+
 
   //TODO: impedir que podamos hacer click en el boton
   // si ya hemos contestado a la pregunta
   public void onFalseButtonClicked(View view) {
     if(answerArray[quizIndex] == 0) {
       // correct
-      resultText.setText(R.string.correct_text);
+      resultText.setText("Correct");
+      //resultText.setText(R.string.correct_text);
     } else {
       // incorrect
-      resultText.setText(R.string.incorrect_text);
+      resultText.setText("Incorrect");
+      //resultText.setText(R.string.incorrect_text);
     }
   }
 
@@ -117,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
     //TODO: refactorizar en un método este codigo repetido
     questionText.setText(questionArray[quizIndex]);
-    resultText.setText(R.string.empty_text);
+    resultText.setText("???");
+    //resultText.setText(R.string.empty_text);
   }
 }
